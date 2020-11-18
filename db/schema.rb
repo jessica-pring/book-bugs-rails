@@ -25,7 +25,6 @@ ActiveRecord::Schema.define(version: 2020_11_18_144937) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "image_link"
-    t.index ["recommendation_id"], name: "index_books_on_recommendation_id"
   end
 
   create_table "recommendations", force: :cascade do |t|

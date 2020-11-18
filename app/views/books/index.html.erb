@@ -1,0 +1,10 @@
+  <div class="search-form-control form-group" >
+    <%= form_tag books_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Please enter a book"
+      %>
+      <%= submit_tag "Search", class: "btn btn-secondary", id: "search-btn" %>
+    <% end %>
+  </div>
