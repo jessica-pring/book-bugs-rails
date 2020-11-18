@@ -7,6 +7,7 @@ class CreateBooks < ActiveRecord::Migration[6.0]
       t.integer :rating
       t.string :link
       t.string :season
+      t.references :recommendation, null: false, foreign_key: true
 
       t.timestamps
     end
