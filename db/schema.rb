@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 2020_11_18_144937) do
     t.integer "rating"
     t.string "link"
     t.string "season"
-    t.bigint "recommendation_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "image_link"
@@ -50,6 +49,5 @@ ActiveRecord::Schema.define(version: 2020_11_18_144937) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "books", "recommendations"
   add_foreign_key "recommendations", "users"
 end

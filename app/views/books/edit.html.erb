@@ -1,0 +1,16 @@
+<div class="edit-page-container">
+  <div class="edit-form">
+    <div class="simple-form-edit ml-4 mt-4 mr-4">
+      <h2> Edit Your Book</h2>
+      <%= simple_form_for(@book) do |f| %>
+        <%= f.input :title %>
+        <%= f.input :author %>
+        <%= f.input :genre %>
+        <%= f.input :link %>
+        <%= f.input :rating %>
+        <%= f.input :season %>
+        <%= f.submit class: "btn btn-secondary", id: "edit-btn" %>
+      <% end %>
+    </div>
+  </div>
+</div>
