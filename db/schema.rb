@@ -22,10 +22,8 @@ ActiveRecord::Schema.define(version: 2020_11_18_115228) do
     t.integer "rating"
     t.string "link"
     t.string "season"
-    t.bigint "recommendation_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["recommendation_id"], name: "index_books_on_recommendation_id"
   end
 
   create_table "recommendations", force: :cascade do |t|
@@ -48,6 +46,5 @@ ActiveRecord::Schema.define(version: 2020_11_18_115228) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "books", "recommendations"
   add_foreign_key "recommendations", "users"
 end
